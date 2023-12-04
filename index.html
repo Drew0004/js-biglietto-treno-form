@@ -21,41 +21,62 @@
 
     <body>
 
-        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <h1 class="text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
         <div class="userform">
             <form>
-                <div>
-                    <div>
-                        <label for="user-name">
-                            Nome Cognome
-                        </label>
+                <div class="text-center">
+                    <div class="d-inline-block px-3">
+                        <div>
+                            <label for="user-name">
+                                Nome Cognome
+                            </label>
+                        </div>
+                        <input id="user-name" type="text" placeholder="Inserisci nome e cognome..." required>
                     </div>
-                    <input id="user-name" type="text" placeholder="Inserisci nome e cognome..." required>
-                </div>
 
-                <div>
-                    <div>
-                        <label for="user-km">
-                            Km da percorrere
-                        </label>
+                    <div class="d-inline-block px-3">
+                        <div>
+                            <label for="user-km">
+                                Km da percorrere
+                            </label>
+                        </div>
+                        <input id="user-km" name="km" type="text" placeholder="Inserisci quanti Km vuoi percorrere..." required>
                     </div>
-                    <input id="user-km" name="km" type="text" placeholder="Inserisci quanti Km vuoi percorrere..." required>
-                </div>
 
-                <div>
-                    <div>
-                        <label for="user-age">
-                            Fascia d'età
-                        </label>
+                    <div class="d-inline-block px-3">
+                        <div>
+                            <label for="user-age">
+                                Fascia d'età
+                            </label>
+                        </div>
+                        <select name="age" id="user-age">
+                            <option value="18">Maggiorenne</option>
+                            <option value="17">Minorenne</option>
+                            <option value="65">Over 65</option>
+                        </select>
                     </div>
-                    <select name="age" id="user-age">
-                        <option value="18">Maggiorenne</option>
-                        <option value="17">Minorenne</option>
-                        <option value="65">Over 65</option>
-                    </select>
+                    <button id="special-button" type="button">Genera</button>
+                    <button type="reset">Annulla</button>
                 </div>
-                <button id="special-button" type="button">Invia</button>
             </form>
+        </div>
+
+        <div class="user-results">
+            <h2>Dettaglio passeggeri</h2>
+            <div class="user-box-info">
+                <h2>Nome passeggero</h2>
+                <h3 id="user-result-name"></h3>
+            </div>
+            <div class="user-box-ticket">
+                <h3>Offerta</h3>
+                <span>Biglietto standard</span>
+                <h3>Carrozza</h3>
+                <span id="r-math-generator-small"></span>
+                <h3>Codice CP</h3>
+                <span id="r-math-generator"></span>
+                <h3>Costo biglietto</h3>
+                <span id="price-results"></span>
+            </div>
         </div>
         
         

@@ -24,16 +24,37 @@ Nota:
 Se non vi sentite particolarmente creativi, questa potrebbe essere un'implementazione da seguire per il secondo milestone. Potete scegliere di implementare una soluzione completamente diversa oppure simile, ma in ogni caso cercate di farla vostra.
 */
 
+const userName = document.getElementById('user-name'); 
 const userKm = document.getElementById('user-km');
-const userAge = document.getElementById('user-age'); 
+const userAge = document.getElementById('user-age');
+
+
 
 const myButton = document.getElementById('special-button');
 
 myButton.addEventListener('click', function(){
-    const kmInput = document.getElementById('user-km').value;
+    const nameInput = (userName.value);
+    console.log("Il nome dell'utente è " + nameInput);
+    
+    const kmInput = parseInt(userKm.value);
     console.log("L'utente ha inserito: " + kmInput + ' Km');
 
-    const ageInput = document.getElementById('user-age').value;
+    const ageInput = (userAge.value);
     console.log("L'utente ha inserito: " + ageInput);
+
+
+    let price = (kmInput * 0.21);
+    console.log("L'utente paga: " + price + '€');
+
+    let age = document.getElementById('user-age').value;
+
+    console.log('age: ', age);
+
+    if (age < 18){
+        console.log("Il prezzo in sconto è: " + price * 0.8 + '€');
+    }
+    else if (age >= 65){
+        console.log("Il prezzo in sconto è: " + price * 0.6 + '€');
+    }
 });
 

@@ -47,7 +47,7 @@ myButton.addEventListener('click', function(){
     console.log("L'utente ha inserito: " + ageInput);
 
 
-    let price = (kmInput * 0.21);
+    let price = (kmInput * 0.21).toFixed(2);
     console.log("L'utente paga: " + price + '€');
     document.getElementById('price-results').innerHTML = `${price}€`;
 
@@ -56,12 +56,12 @@ myButton.addEventListener('click', function(){
     console.log('age: ', age);
 
     if (age < 18){
-        let priceDiscounted20 = (price * 0.8);
+        let priceDiscounted20 = (price * 0.8).toFixed(2);
         console.log("Il prezzo in sconto è: " + price * 0.8 + '€');
         document.getElementById('price-results').innerHTML = `${priceDiscounted20}€`;
     }
     else if (age >= 65){
-        let priceDiscounted40 = (price * 0.6);
+        let priceDiscounted40 = (price * 0.6).toFixed(2);
         console.log("Il prezzo in sconto è: " + price * 0.6 + '€');
         document.getElementById('price-results').innerHTML = `${priceDiscounted40}€`;
     }

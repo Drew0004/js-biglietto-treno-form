@@ -12,6 +12,12 @@
     general 
 */
 
+.bg-image{
+    background-image: url(../img/trainStation.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 /* 
     header 
 */

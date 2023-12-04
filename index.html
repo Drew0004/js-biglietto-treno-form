@@ -19,65 +19,84 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
 
-    <body>
-
-        <h1 class="text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-        <div class="userform">
-            <form>
-                <div class="text-center">
-                    <div class="d-inline-block px-3">
+    <body class="bg-image">
+        <main>
+            
+            <h2 class="text-center text-white my-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+            
+            <div class="userform bg-white rounded-5 mt-3 container-lg py-5 text-center">
+                <form class="row align-items-center">
+                    
+                    <div class="col-4">
                         <div>
-                            <label for="user-name">
+                            <label class="fw-bold" for="user-name">
                                 Nome Cognome
                             </label>
                         </div>
-                        <input id="user-name" type="text" placeholder="Inserisci nome e cognome..." required>
+                        <input class="mt-2 rounded-5 py-2 px-4 border-dark" id="user-name" type="text" placeholder="Inserisci nome e cognome..." required>
                     </div>
 
-                    <div class="d-inline-block px-3">
+                    <div class="col-4">
                         <div>
-                            <label for="user-km">
+                            <label class="fw-bold" for="user-km">
                                 Km da percorrere
                             </label>
                         </div>
-                        <input id="user-km" name="km" type="text" placeholder="Inserisci quanti Km vuoi percorrere..." required>
+                        <input class="mt-2 rounded-5 py-2 px-4 border-dark" id="user-km" name="km" type="text" placeholder="Inserisci quanti Km vuoi percorrere..." required>
                     </div>
 
-                    <div class="d-inline-block px-3">
+                    <div class="col-4">
                         <div>
-                            <label for="user-age">
+                            <label class="fw-bold" for="user-age">
                                 Fascia d'età
                             </label>
                         </div>
-                        <select name="age" id="user-age">
+                        <select class="mt-2 rounded-5 py-2 px-4 border-2 border-dark" name="age" id="user-age">
                             <option value="18">Maggiorenne</option>
                             <option value="17">Minorenne</option>
                             <option value="65">Over 65</option>
                         </select>
                     </div>
-                    <button id="special-button" type="button">Genera</button>
-                    <button type="reset">Annulla</button>
-                </div>
-            </form>
-        </div>
+                    
+                    <div class="col-12 pt-5">
+                        <button class="btn rounded-5 btn-success" id="special-button" type="button">Genera</button>
+                        <button class="btn rounded-5 btn-secondary" type="reset">Annulla</button>
+                    </div>
+                    
+                </form>
+            </div>
 
-        <div class="user-results">
-            <h2>Dettaglio passeggeri</h2>
-            <div class="user-box-info">
-                <h2>Nome passeggero</h2>
-                <h3 id="user-result-name"></h3>
+            <h2 class="text-center text-white my-5">IL TUO BIGLIETTO</h2>
+
+            <div class="user-results mt-3 container-lg">
+                
+                <div class="row">
+                    
+                    <div class="col-4 rounded-5 rounded-end-0 bg-dark py-5 ps-5">
+                        <h2 class="text-white mb-4">Dettaglio passeggeri</h2>
+                        <div class="user-box-info">
+                            <h2 class="text-white fs-4 mb-4">Nome passeggero</h2>
+                            <h3 class="text-white fs-5 fw-bold" id="user-result-name"></h3>
+                        </div>
+                    </div>
+                    
+                    <div class="col-8 rounded-5 rounded-start-0 bg-secondary py-5 ps-5">
+                        <div class="user-box-ticket">
+                            <h3 class="text-white">Offerta</h3>
+                            <p class="text-white">Biglietto standard</p>
+                            <h3 class="text-white">Carrozza</h3>
+                            <p class="text-white" id="r-math-generator-small"></p>
+                            <h3 class="text-white">Codice CP</h3>
+                            <p class="text-white" id="r-math-generator"></p>
+                            <h3 class="text-white">Costo biglietto</h3>
+                            <p class="text-white" id="price-results"></p>
+                        </div>
+                    </div>
+                
+                </div>
+            
             </div>
-            <div class="user-box-ticket">
-                <h3>Offerta</h3>
-                <span>Biglietto standard</span>
-                <h3>Carrozza</h3>
-                <span id="r-math-generator-small"></span>
-                <h3>Codice CP</h3>
-                <span id="r-math-generator"></span>
-                <h3>Costo biglietto</h3>
-                <span id="price-results"></span>
-            </div>
-        </div>
+        </main>
         
         
         <!-- Link bootstrap JavaScript -->
